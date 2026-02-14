@@ -1,0 +1,196 @@
+/* ===== FONTES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+/* ===== BASE DO SITE ===== */
+body {
+    background: #0b001a;
+    color: #eaeaea;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    line-height: 1.8;
+    margin: 0;
+    cursor: default;
+
+    /* grid retrô discreto */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding: 30px;
+    background: #150033;
+    border-bottom: 2px solid #4444ff;
+}
+
+header h1 {
+    font-family: 'Press Start 2P';
+    font-size: 36px;
+    color: #00ffff;
+    text-shadow: none;
+}
+
+/* ===== TÍTULOS DE SEÇÃO ===== */
+h2 {
+    font-family: 'Press Start 2P';
+    font-size: 26px;
+    color: #ff5555;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-family: 'Press Start 2P';
+    font-size: 22px;
+    color: #55ff55;
+}
+
+/* ===== MENU ===== */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0;
+    background: #220044;
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Press Start 2P';
+    font-size: 18px;
+    padding: 8px 12px;
+}
+
+nav a:hover {
+    color: #00ffff;
+}
+
+/* ===== SEÇÕES (CARDS) ===== */
+section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #1a0033;
+    border: 2px solid #5555ff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== TEXTO PRINCIPAL ===== */
+section p {
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+/* ===== CURIOSIDADES (ASIDE) ===== */
+aside {
+    background: #150022;
+    border: 1px solid #4444aa;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: none;
+    color: #cccccc;
+}
+
+aside h4 {
+    font-family: 'Press Start 2P';
+    font-size: 14px;
+    color: #bbbbbb;
+}
+
+aside::before {
+    content: "🎮 Curiosidades Gamer";
+    display: block;
+    margin-bottom: 10px;
+    color: #aaaaaa;
+}
+
+.start {
+    display: block;
+    margin: 20px auto;
+    background: #ffff66;
+    border: 2px solid #cccc00;
+    padding: 12px 25px;
+    font-family: 'Press Start 2P';
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    /* animação suave */
+}
+
+.start:hover {
+    background: #ffff99;
+    transform: scale(1.1);
+    /* aumenta levemente */
+    box-shadow: 0 0 15px #ffff66;
+    /* brilho retrô */
+}
+
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    section {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    img {
+        max-width: 90%;
+        /* imagens menores em telas pequenas */
+    }
+}
+
+/* ===== EFEITO TV ANTIGA (SCANLINE) ===== */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(transparent,
+            transparent 3px,
+            rgba(0, 0, 0, 0.1) 4px);
+    pointer-events: none;
+}
+
+.imagens-lado {
+    display: flex;
+    justify-content: center;
+    /* centraliza o grupo de imagens */
+    gap: 20px;
+    /* espaço entre as imagens */
+    flex-wrap: wrap;
+    /* quebra linha se a tela for pequena */
+}
+
+.imagens-lado img {
+    width: 200px;
+    /* largura pequena */
+    height: auto;
+    border: 2px solid #00ffff;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0, 255, 255, 0.2);
+}
